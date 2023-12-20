@@ -1,0 +1,9 @@
+fragment BookFields on Book {
+    id
+    name
+    imageUrl
+    users {
+        id
+        name
+    }
+}

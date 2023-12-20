@@ -1,0 +1,5 @@
+fragment InputErrorFields on FieldError {
+    errorCode
+    field
+    message
+}

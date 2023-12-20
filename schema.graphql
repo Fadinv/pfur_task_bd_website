@@ -1,0 +1,67 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Book {
+    count: Float!
+    id: Float!
+    imageUrl: String!
+    name: String!
+    users: [User!]!
+}
+
+type FieldError {
+    errorCode: Float!
+    field: String!
+    message: String!
+}
+
+type Mutation {
+    createBook(count: Float!, imageUrl: String!, name: String!): Book
+    deleteBookById(bookId: Float!): Boolean
+    getBookByUser(bookId: Float!): Book
+    login(options: LoginFields!): UserResponse
+    logout: Boolean!
+    registry(options: RegistryFields!): UserResponse!
+    updateBook(bookId: Float!, count: Float!, imageUrl: String!, name: String!, userId: Float!): Book
+    updateStudent(options: RegistryFields!): UserResponse!
+}
+
+type Query {
+    getAllBooks: [Book!]
+    getAllUsers: [User!]
+    getBookById(bookId: Float!): [Book!]
+    getMe: User
+}
+
+type User {
+    books: [Book!]!
+    createdAt: String!
+    email: String!
+    id: Float!
+    isAdmin: Boolean!
+    name: String!
+    phone: String!
+    updatedAt: String!
+}
+
+type UserResponse {
+    errors: [FieldError!]
+    user: User
+}
+
+input LoginFields {
+    email: String!
+    password: String!
+}
+
+input RegistryFields {
+    email: String!
+    isAdmin: Boolean!
+    name: String!
+    password: String!
+    phone: String!
+}

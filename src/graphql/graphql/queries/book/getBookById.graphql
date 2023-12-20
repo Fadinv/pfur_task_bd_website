@@ -1,0 +1,5 @@
+query GetBookById($bookId: Float!) {
+    getBookById(bookId: $bookId) {
+        ...BookFields
+    }
+}

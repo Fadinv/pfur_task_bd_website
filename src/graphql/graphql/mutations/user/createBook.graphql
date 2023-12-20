@@ -1,0 +1,8 @@
+mutation CreateBook($count: Float!, $imageUrl: String!, $name: String!) {
+    createBook(count: $count, imageUrl: $imageUrl, name: $name) {
+        id
+        name
+        count
+        imageUrl
+    }
+}

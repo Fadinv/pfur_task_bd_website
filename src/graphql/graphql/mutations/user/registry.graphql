@@ -1,0 +1,18 @@
+mutation Registry($options: RegistryFields!) {
+    registry(options: $options) {
+        errors {
+            field
+            message
+            errorCode
+        }
+        user {
+            id
+            createdAt
+            updatedAt
+            isAdmin
+            name
+            email
+            phone
+        }
+    }
+}

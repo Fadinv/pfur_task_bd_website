@@ -1,0 +1,11 @@
+query GetMe {
+    getMe {
+        ...UserFields
+        books {
+            name
+            id
+            imageUrl
+            count
+        }
+    }
+}
