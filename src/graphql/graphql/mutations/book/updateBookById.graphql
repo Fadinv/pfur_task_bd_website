@@ -1,0 +1,14 @@
+mutation UpdateBook($userId: Float!, $count: Float!, $imageUrl: String!, $name: String!, $bookId: Float!) {
+    updateBook(userId: $userId, count: $count, imageUrl: $imageUrl, name: $name, bookId: $bookId) {
+        id
+        name
+        count
+        imageUrl
+        users {
+            id
+            isAdmin
+            name
+            phone
+        }
+    }
+}

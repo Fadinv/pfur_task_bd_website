@@ -1,0 +1,22 @@
+mutation UpdateStudent($options: RegistryFields!) {
+    updateStudent(options: $options) {
+        errors {
+            field
+            message
+            errorCode
+        }
+        user {
+            id
+            createdAt
+            updatedAt
+            isAdmin
+            name
+            email
+            phone
+            books {
+                name
+                id
+            }
+        }
+    }
+}
